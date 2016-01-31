@@ -100,8 +100,11 @@ $(function() {
          */
         var feedEntries;
 
-        beforeEach(function () {
-            feedEntries = $('.feed').html();
+        beforeEach(function (done) {
+            loadFeed(1, function () {
+                feedEntries = $('.feed').html();
+                done();
+            });
         });
 
         /* This test loads a different feed from the startup and compares
@@ -109,7 +112,7 @@ $(function() {
          * test passes if they are different.
          */
         it('is loaded and entries change', function (done) {
-            loadFeed(1, function() {
+            loadFeed(0, function() {
                 expect($('.feed').html()).not.toEqual(feedEntries);
                 done();
             });

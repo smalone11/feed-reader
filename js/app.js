@@ -50,7 +50,7 @@ function init() {
        data: JSON.stringify({url: feedUrl}),
        contentType:"application/json",
        success: function (result, status){
-
+                console.log('success!');
                  var container = $('.feed'),
                      title = $('.header-title'),
                      entries = result.feed.entries,
@@ -74,6 +74,7 @@ function init() {
                  }
                },
        error: function (result, status, err){
+                console.log('error!');
                  //run only the callback without attempting to parse result due to error
                  if (cb) {
                      cb();

@@ -6,7 +6,7 @@
 
 ## Features
 
-* Clicking on any of the black titles will link you to the article.
+* Clicking on any of the article titles will link you to the article.
 
 * Clicking on the hamburger symbol in the top left will both open and close the sidebar.
 
